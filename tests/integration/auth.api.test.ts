@@ -69,6 +69,18 @@ describe('Auth API', () => {
       expect(res.body.success).toBe(false);
       expect(res.body.message).toBe('User with this email already exists');
     });
+
+    it('should return 400 for invalid data', async () => {
+      const res = await request(app)
+        .post('/api/v1/auth/register')
+        .send({ ...registrationData, email: 'not-an-email' });
+
+      expect(res.statusCode).toEqual(400);
+      expect(res.body.success).toBe(false);
+      expect(res.body.message).toBe('Validation failed');
+      expect(res.body.errors).toBeInstanceOf(Array);
+      expect(res.body.errors[0].field).toBe('email');
+    });
   });
 });
 

@@ -60,7 +60,7 @@
 - [X] T012 [US1] Implement school code validation logic in `src/services/Auth.service.ts`
 - [X] T013 [US1] Implement student registration logic with AuditLog (REGISTER) in `src/services/Auth.service.ts`
 - [X] T014 [US1] Implement `register` controller method in `src/controller/Auth.controller.ts`
-- [ ] T015 [US1] Map registration route in `src/routes/Auth/Auth.route.ts`
+- [X] T015 [US1] Map registration route in `src/routes/Auth/Auth.route.ts`
 
 **Checkpoint**: User Story 1 functional - Students can register.
 
