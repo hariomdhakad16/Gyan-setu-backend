@@ -23,7 +23,7 @@
 
 **Purpose**: Project initialization and core security dependencies.
 
-- [ ] T001 Install dependencies: `npm install jsonwebtoken bcryptjs`
+- [X] T001 Install dependencies: `npm install jsonwebtoken bcryptjs`
 - [ ] T002 Configure environment variables in `.env` (`JWT_SECRET`, `JWT_REFRESH_SECRET`)
 - [ ] T003 [P] Create `AuditLog` model in `src/models/AuditLog.model.ts`
 - [ ] T004 [P] Create `School` model in `src/models/School.model.ts`
@@ -36,7 +36,7 @@
 
 - [ ] T005 [P] Create `User` model with lockout fields in `src/models/User.model.ts`
 - [ ] T006 [P] Implement `Auth.schema.ts` with Zod validation in `src/validation/schemas/Auth.schema.ts`
-- [ ] T007 Implement base `Auth.service.ts` with password hashing utility in `src/services/Auth.service.ts`
+- [X] T007 Implement base `Auth.service.ts` with password hashing utility in `src/services/Auth.service.ts`
 - [ ] T008 [P] Setup `Auth.controller.ts` structure in `src/controller/Auth.controller.ts`
 - [ ] T009 [P] Setup `Auth.route.ts` and register in `src/routes/index.ts`
 

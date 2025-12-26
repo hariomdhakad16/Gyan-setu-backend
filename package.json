@@ -9,14 +9,18 @@
   },
   "dependencies": {
     "@anthropic-ai/claude-code": "^2.0.76",
+    "bcryptjs": "^2.4.3",
     "cli-cursor": "^5.0.0",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.0",
     "tsx": "^4.21.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20.12.7",
     "typescript": "^5.4.5"
   },
