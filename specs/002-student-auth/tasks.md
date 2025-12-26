@@ -26,7 +26,7 @@
 - [X] T001 Install dependencies: `npm install jsonwebtoken bcryptjs`
 - [ ] T002 Configure environment variables in `.env` (`JWT_SECRET`, `JWT_REFRESH_SECRET`)
 - [ ] T003 [P] Create `AuditLog` model in `src/models/AuditLog.model.ts`
-- [ ] T004 [P] Create `School` model in `src/models/School.model.ts`
+- [X] T004 [P] Create `School` model in `src/models/School.model.ts`
 
 ---
 
@@ -57,7 +57,7 @@
 
 ### Implementation for User Story 1
 
-- [ ] T012 [US1] Implement school code validation logic in `src/services/Auth.service.ts`
+- [X] T012 [US1] Implement school code validation logic in `src/services/Auth.service.ts`
 - [ ] T013 [US1] Implement student registration logic with AuditLog (REGISTER) in `src/services/Auth.service.ts`
 - [ ] T014 [US1] Implement `register` controller method in `src/controller/Auth.controller.ts`
 - [ ] T015 [US1] Map registration route in `src/routes/Auth/Auth.route.ts`
