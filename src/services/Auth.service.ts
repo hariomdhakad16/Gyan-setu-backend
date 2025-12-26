@@ -1,5 +1,8 @@
 import bcrypt from 'bcryptjs';
 import School from '../models/School.model';
+import User from '../models/User.model';
+import AuditLog from '../models/AuditLog.model';
+import { RegisterBody } from '../types/auth.types';
 
 class AuthService {
   /**
@@ -20,6 +23,51 @@ class AuthService {
   public async validateSchoolCode(schoolCode: string): Promise<boolean> {
     const school = await School.findOne({ schoolCode });
     return !!school;
+  }
+
+  /**
+   * Registers a new user.
+   * @param data The registration data.
+   * @returns The newly created user.
+   */
+  public async register(data: RegisterBody) {
+    const { email, password, firstName, lastName, schoolCode } = data;
+
+    const isSchoolCodeValid = await this.validateSchoolCode(schoolCode);
+    if (!isSchoolCodeValid) {
+      throw new Error('Invalid school code');
+    }
+
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      throw new Error('User with this email already exists');
+    }
+
+    const hashedPassword = await this.hashPassword(password);
+    
+    const school = await School.findOne({ schoolCode });
+
+    const newUser = new User({
+      email,
+      password: hashedPassword,
+      profile: {
+        firstName,
+        lastName,
+      },
+      studentInfo: {
+        schoolId: school?._id,
+      }
+    });
+
+    await newUser.save();
+
+    const auditLog = new AuditLog({
+      userId: newUser._id,
+      action: 'REGISTER',
+    });
+    await auditLog.save();
+
+    return newUser;
   }
 }
 

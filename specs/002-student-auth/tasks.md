@@ -25,7 +25,7 @@
 
 - [X] T001 Install dependencies: `npm install jsonwebtoken bcryptjs`
 - [ ] T002 Configure environment variables in `.env` (`JWT_SECRET`, `JWT_REFRESH_SECRET`)
-- [ ] T003 [P] Create `AuditLog` model in `src/models/AuditLog.model.ts`
+- [X] T003 [P] Create `AuditLog` model in `src/models/AuditLog.model.ts`
 - [X] T004 [P] Create `School` model in `src/models/School.model.ts`
 
 ---
@@ -34,8 +34,8 @@
 
 **Purpose**: Core infrastructure needed for all authentication flows.
 
-- [ ] T005 [P] Create `User` model with lockout fields in `src/models/User.model.ts`
-- [ ] T006 [P] Implement `Auth.schema.ts` with Zod validation in `src/validation/schemas/Auth.schema.ts`
+- [X] T005 [P] Create `User` model with lockout fields in `src/models/User.model.ts`
+- [X] T006 [P] Implement `Auth.schema.ts` with Zod validation in `src/validation/schemas/Auth.schema.ts`
 - [X] T007 Implement base `Auth.service.ts` with password hashing utility in `src/services/Auth.service.ts`
 - [X] T008 [P] Setup `Auth.controller.ts` structure in `src/controller/Auth.controller.ts`
 - [X] T009 [P] Setup `Auth.route.ts` and register in `src/routes/index.ts`
@@ -58,7 +58,7 @@
 ### Implementation for User Story 1
 
 - [X] T012 [US1] Implement school code validation logic in `src/services/Auth.service.ts`
-- [ ] T013 [US1] Implement student registration logic with AuditLog (REGISTER) in `src/services/Auth.service.ts`
+- [X] T013 [US1] Implement student registration logic with AuditLog (REGISTER) in `src/services/Auth.service.ts`
 - [ ] T014 [US1] Implement `register` controller method in `src/controller/Auth.controller.ts`
 - [ ] T015 [US1] Map registration route in `src/routes/Auth/Auth.route.ts`
 
